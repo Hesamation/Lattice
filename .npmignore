@@ -1,0 +1,6 @@
+test/
+spec/
+.github/
+.env.example
+vitest.config.ts
+coverage/
