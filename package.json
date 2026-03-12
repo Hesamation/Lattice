@@ -1,0 +1,56 @@
+{
+  "name": "lattice-orchestrator",
+  "version": "0.1.0",
+  "description": "Agent orchestration for multi-service projects — coordinate agents, manage budgets, settle via x402 on Solana & Base",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "lattice": "./bin/lattice.ts"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.mts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lattice": "bun run bin/lattice.ts",
+    "sim": "bun run bin/lattice.ts sim --mode full --chain all"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "@solana/spl-token": "^0.4.0",
+    "ethers": "^6.13.0",
+    "x402-solana": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "agents",
+    "x402",
+    "solana",
+    "base",
+    "control-plane",
+    "orchestration",
+    "micropayments"
+  ],
+  "author": "Hesamation",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hesamation/lattice"
+  },
+  "homepage": "https://github.com/Hesamation/lattice#readme",
+  "bugs": {
+    "url": "https://github.com/Hesamation/lattice/issues"
+  }
+}
